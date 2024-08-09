@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -7,6 +10,7 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   return (
     <header className="flex justify-between items-center py-4 px-7 border-b">
       <Link href="/">
@@ -22,7 +26,12 @@ export default function Header() {
         <ul className="flex items-center gap-x-5 text-sm">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <Link href={link.href} className="text-zinc-400">
+              <Link
+                href={link.href}
+                className={`text-zinc-${
+                  pathname === link.href ? "900" : "400"
+                }`}
+              >
                 {link.label}
               </Link>
             </li>
