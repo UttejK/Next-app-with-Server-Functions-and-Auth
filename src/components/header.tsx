@@ -20,7 +20,7 @@ export default function Header() {
           alt="logo"
           height={100}
           width={100}
-          className="w-16"
+          className="w-16 rounded-lg"
         />
       </Link>
       <nav>

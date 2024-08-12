@@ -12,4 +12,3 @@ export default function Page() {
     </main>
   );
 }
-// past one hour in the course
