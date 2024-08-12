@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 export default async function PostsList() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  // add additional 3s delay to simulate loading
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   const res = await fetch("https://dummyjson.com/posts?limit=10");
   const data = await res.json();

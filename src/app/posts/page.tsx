@@ -1,5 +1,4 @@
 import PostsList from "@/components/posts-list";
-import Link from "next/link";
 import { Suspense } from "react";
 import Loading from "./loading";
 
@@ -13,4 +12,4 @@ export default function Page() {
     </main>
   );
 }
-// past one hour
+// past one hour in the course
